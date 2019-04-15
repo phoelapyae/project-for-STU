@@ -1,0 +1,65 @@
+.footer{
+    text-align: center;
+    &__loc{
+        font-size: 1.2rem;
+        color: $color-white;
+        span{
+            display: block;
+            margin-top: 5px;
+        }
+        @include respond(phone){
+            font-size: 1rem;
+        }
+    }
+    .social-links{
+        margin-top: 5px;
+        .icon{
+            list-style: none;
+            li{
+                display: inline-block;
+                margin-right: 1rem;
+                border-radius: 50%;
+                a:link,
+                a:visited{
+                    font-size: 1.6rem;
+                    color: $color-white;
+                    @include respond(phone){
+                        font-size: 1.2rem;
+                    }
+                }
+                a:hover,
+                a:active{
+                    color: $color-primary-light;
+                }
+            }
+        }
+    }
+    &__nav{
+        list-style: none;   
+        li{
+            display: inline-block;
+            margin-right: 1rem;
+            a:link,
+            a:visited{
+                color: $color-white;
+                font-family: 'Gentium Basic', serif;
+                font-size: 1.05rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                z-index: 99;
+                letter-spacing: 1px;
+                @include respond(phone){
+                    font-size: .8rem;
+                }
+            }
+            a:hover,
+            a:active{
+                color: $color-primary-light;
+            }
+        }
+    }
+    &__paragraph{
+        color: $color-white;
+        font-size: 140%;
+    }
+}

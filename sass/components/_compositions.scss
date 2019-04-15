@@ -1,0 +1,26 @@
+.composition {
+    position: relative;
+    &__photo {
+        width: 100%;
+        box-shadow: 0 1.5rem 2.5rem rgba($color-black, .3);
+        border-radius: 20px;
+        position: relative;
+        transition: all .2s;
+        outline-offset: 1rem;
+        @include respond(tab-port){
+            box-shadow: none;
+            margin-bottom: 1rem;
+            width: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @include respond(phone){
+            width: 85%;
+        }
+        &:hover {
+            outline: .5rem solid $color-primary;
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+        }
+    }
+}

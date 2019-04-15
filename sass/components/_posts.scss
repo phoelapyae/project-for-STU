@@ -1,0 +1,56 @@
+.section-posts{
+    position: relative;
+    @include respond(tab-port){
+        width: 80%;
+        margin: 0 auto;
+    }
+    .posts{
+        background-color:#F0F8FF;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 5%;
+        box-shadow: .5rem .5rem 1rem rgba(0,0,0,0.1);
+        overflow: hidden;
+        padding: 2%;
+        transition: all .5s;
+        @include respond(tab-land){
+            height: 17rem;
+            margin: 0 auto;
+        }
+        &__img{
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            height: 65%;
+            @include respond(tab-port){
+                width: 65%;
+                transform: translateX(4rem);
+            }
+            @include respond(phone){
+                width: 100%;
+                transform: translateX(0);
+            }
+        }
+        &__heading{
+            font-size: 1.15rem;
+            text-align: center;
+            cursor: pointer;
+
+        }
+        &__items{
+            font-size: 140%;
+            padding-top: 1%;
+            .read-more{
+                border: none;
+                text-decoration: none;
+                margin-left: 0;
+                line-height: 145%;
+                vertical-align: center;
+                cursor: pointer;
+            }
+        }
+        &:hover{
+            transform: translateY(-1rem) scale(1.07);
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "index.html",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Phoela",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

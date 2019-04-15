@@ -1,0 +1,72 @@
+.hd{
+    height: auto;
+    &__lists{
+        padding: 0;
+        list-style: none;
+        margin-top: 7rem;
+        color: #fff;
+        font-size: 1.3rem;
+        @include respond(tab-port){
+            margin-top: 5rem;
+            position: relative;
+            left: 30%;
+        }
+        @include respond(phone){
+            font-size: 1.1rem;
+        }
+        li{
+            margin-bottom: 1rem;
+            i{
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.head{
+    @include respond(tab-port){
+        margin-top: 10rem;
+    }
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        @include respond(phone){
+            width: 12rem;
+            height: 12rem;
+        }
+    }
+    &__img{
+        position: relative;
+        height: 100%;
+        transform: translateY(-2rem) scale(1.5);
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+    &:hover &__img{
+        transform: translateY(-3rem) scale(1.4);
+        filter: blur(3px) brightness(70%);
+    }
+    &__caption{
+        font-size: 1.2rem;
+        position: absolute;
+        top: 75%;
+        left: 43%;
+        transform: translate(-40%,50%);
+        color:#fff;
+        text-align: center;
+        backface-visibility: hidden;
+        opacity: 0;
+        transition: all .5s;
+    }
+    &:hover &__caption{
+        opacity: 1;
+        top: 50%;
+    }
+}

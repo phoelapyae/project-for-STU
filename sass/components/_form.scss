@@ -1,0 +1,66 @@
+.contact-box{
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    padding: 2rem;
+    background-color:#f7f7f7;
+    box-sizing: border-box;
+    @include respond(tab-port){
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .map{
+        position: relative;
+        z-index: 100;
+        height: 27rem;
+        width: 49%;
+        @include respond(tab-port){
+            width: 100%;
+            height: 20rem;
+        }
+    }
+    .form{
+        padding-top: 5rem;
+        width: 49%;
+        height: 27rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        @include respond(tab-port){
+            position: relative;
+            width: 100%;
+            height: auto;
+            position: relative;
+            top: 0;
+            left: 50%;
+            left: 0;
+        }
+        &__box{
+            input[type=email]{
+                width: 60%;
+                padding: 8px;
+                margin-left: 15%;
+                @include respond(phone){
+                    width: 65%;
+                    padding: 5px 8px;
+                    margin-left: 12%;
+                }
+            }
+            input[type=submit]{
+                margin-left: -5px;
+                padding: 8px 20px;
+                @include respond(phone){
+                    padding: 5px 10px;
+                }
+            }
+            *:focus{
+                outline: none;
+                color: $color-grey-dark;
+                font-size: 140%;
+                font-style: bold;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,19 @@
+header{
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/header_bg3.jpg);
+    // background-position: top;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    @include respond(tab-port){
+        background-position: center;
+    }
+}
+header a{
+    text-decoration: none;
+    text-transform: uppercase;
+}

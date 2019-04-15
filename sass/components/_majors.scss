@@ -1,0 +1,38 @@
+.box{
+    text-align: center;
+    i{
+        font-size: 2rem;
+        color: $color-tertiary-light;
+        margin-bottom: 1rem;
+        @include respond(phone){
+            font-size: 1.5rem;
+        }
+    }
+    h3{
+        font-size: 140%;
+        font-weight: 300;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 140%;
+        margin-bottom: 2rem;
+    }
+    a{
+        font-size: 130%;
+        font-weight: 600;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+        border-radius: 2rem;
+        position: relative;
+        padding: .8rem 1rem;
+        @include respond(tab-land){
+            font-size: 100%;
+            padding: .4rem .8rem;
+        }
+    }
+    
+}
+#faculty{
+    animation-iteration-count: 2;
+}
